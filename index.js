@@ -31,6 +31,7 @@ if(language.includes(answer)){
     const index = n % language.length;
     let npcAnswer = language[index];
     const paragraph2 = document.createElement('h3');
+    clearBox();
     paragraph2.innerText = 'NPCの答え: ' + npcAnswer + 'です。あなたの番です。また、フォームの答えを入力してください。';
     gameDivided.appendChild(paragraph2);
     language.some(function(v, i){
@@ -43,4 +44,8 @@ if(language.includes(answer)){
   gameDivided.appendChild(paragraph4);
 }
 console.log(answer);
+}
+
+function clearBox() {
+  answersInput.value = '';
 }
